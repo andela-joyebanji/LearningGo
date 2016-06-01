@@ -36,3 +36,25 @@ func main() {
   fmt.Println(names[1:1])
 
 }
+
+
+
+ar = [-1, 3, -4, 5, 1, -6, 2, 1]
+result = solution(ar)
+print result
+
+def solution(data):
+  lSum = p = 0
+  ret = []
+  rSum = sum(data)
+  if (rSum - data[p] == 0):
+    ret[index] = p
+    index+=1
+  lSum = data[0];
+  for i in xrange(len(data)-1):
+    p+=1
+    if (lSum == (rSum - (data[p] + lSum))):
+      ret[index] = p
+      index+=1
+    lSum += data[p]
+  return ret
